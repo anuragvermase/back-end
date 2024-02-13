@@ -22,4 +22,32 @@ for(let i=-3; i<5; i++){
 }
 */
 
+/** 
+let obj = undefined;
 
+console.log(obj.name); //TypeError: Cannot read properties of undefined (reading 'name')
+*/
+
+/*
+try{ 
+let obj = {
+    name : "Great"
+};
+
+console.log(obj.name);
+}catch(err){
+    console.log("Exception handled");
+    console.log(err);
+}
+*/
+
+try{ 
+    let obj =undefined
+    
+    console.log(obj.name);
+ }catch(err){
+    console.log("Exception handled");
+    console.log(err);
+ }finally{
+    console.log("I will always executed");
+ }
