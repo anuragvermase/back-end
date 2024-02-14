@@ -1,0 +1,34 @@
+npm -> node package manager
+npm helps to get all the dependencies.
+
+Use cases of npm:
+
+1.To create a node.js project
+  - npm init
+  - this command created package.json file. which contain all the information about 
+    the project
+
+2. To get the dependencies / modules
+  - npm connects the local host to NPM remote repositry(where all the dependencies and 
+    modules are there ) over a network
+  - command for adding express(external dependencies) : npm install express 
+  - for installing new dependencies your loscal machine should connected with internet
+  - after adding dependencies,new dependencies added to package.json.
+
+Modules???
+
+- modules are singles or multiple javascript files - these files contains logic - to solve 
+  any problem
+- modules should be reused from anywhere in the program
+
+Modules of three types:
+1. custom modules
+2. Inbuilt modules (eg: fs, os, http)
+3. External modules (eg: express)
+
+
+HTTP module
+server - never stopping process
+
+client-server model : client should know the URL for the request, and after processing 
+server will give the data(response) back (slso called request response cycle)
