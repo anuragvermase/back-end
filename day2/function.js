@@ -19,7 +19,7 @@ hero(); //function call
 
 // function with argument
 
-function sumOfTwoNum(x,y){  //(x,y) -> parameter / dummy value`
+function sumOfTwoNum(x,y){  //(x,y) -> parameter / dummy value
    return x+y; 
 }
 
@@ -86,7 +86,7 @@ cal(7,8);
 
 //argumnet object
 
-// you cannot use argument in arrow function as youy can use in normal function
+// you cannot use argument in arrow function as you can use in normal function
 var cal = () => {
     console.log(arguments);
 }
@@ -96,8 +96,8 @@ cal(7,8);
 
 //IIFE -Immediately Invoked Function Expression
 
-//use when you need to execute functiom immediately afetr the function definition.
-//also, when you need tho execution the function only one time
+//use when you need to execute functiom immediately after the function definition.
+//also, when you need tho execution the function only one time.
 
 (function(){
     console.log("hello anurag");

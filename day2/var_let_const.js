@@ -36,7 +36,8 @@ var i = 24;
 console.log(i); //21
 
 /** In hoisting when var i = 24 is define/executing after console.log(), it goes to top
- * and define a 'var i' , this is hoisting. And thats the resason for undefined 'i'
+ * and define a 'var i' , this is called hoisting. And thats the resason for undefined 'i'
+ * and not giving any error.
  */
 
 

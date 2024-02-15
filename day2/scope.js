@@ -23,7 +23,7 @@ printName()
                                                                 
 function num(){
     var one = 1;
-    console.log(one);
+    console.log(one);  //1
 
 } 
 num()
@@ -52,7 +52,7 @@ console.log(x);  //20
 
 
 {
-    let y = 20;       // ---> block scope
+    let y = 20;       // ---> block scope (let)
     console.log(y); // 20
 }
 
