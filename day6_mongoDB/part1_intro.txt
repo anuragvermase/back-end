@@ -1,0 +1,24 @@
+What is MongoDB?
+- It is simply Database Management System, and it will allow to store Database
+- Document oriented
+- Stores data in the form of collections & documents
+- Gained popularity in mid 2000's
+
+'Mongo' means Big/Humongous
+
+
+Why MongoDB?
+RDBMS 
+eg: MYSQL, Oracle
+
+Have limitation
+- Data stores in tables
+- It should have fixed schema
+
+In today's world the amount of data is huge 
+so, it needs more storage and computation and RDBMS (MYSQL) have performance issue for
+storing and compution Huge data.
+And, for this MongoDB comes in, it is very efficient in storing huge amount of data.
+
+- as it is Natively scalable
+- and, provide flexible schema
