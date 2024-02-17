@@ -1,0 +1,20 @@
+Commands:
+
+mongosh: 'mongosh' command is used as a command-line interface(CLI) for MongoDB. 
+It allows usres to interact with MOngoDB databases, run queries, perform administrative 
+task and manage database operatons from the command line.
+
+cls : use to clear the screen.
+
+show databases : shows the database present/created
+
+NOTE: You'll only see the database list, if it has data/documents in the mongoDB shell.
+
+use admin: 'use' command use to change the database
+
+use newdb : 'use' command also use to create new database
+
+COLLECTIONS 
+
+
+TBC.....
