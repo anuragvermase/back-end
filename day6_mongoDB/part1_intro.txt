@@ -8,20 +8,78 @@ What is MongoDB?
 
 
 Why MongoDB?
+
 RDBMS 
-eg: MYSQL, Oracle
+eg: MYSQL, Oracle.
 
 Have limitation
-- Data stores in tables
-- It should have fixed schema
+- Data stores in tables.
+- It should have fixed schema.
 
-In today's world the amount of data is huge 
+In today's world the amount of data is huge.
 so, it needs more storage and computation and RDBMS (MYSQL) have performance issue for
-storing and compution Huge data.
+storing and compution of Huge data.
 And, for this MongoDB comes in, it is very efficient in storing huge amount of data.
 
 - as it is Natively scalable
-- and, provide flexible schema
+- and, provide flexible schema.
+
+* MongoDB belngs to NOSQL Database
 
 
-TBC...
+How MongoDB Organise?
+
+MOngoDB server
+     ⬇️
+Multiple Databases(D1,D2,D3...)
+     ⬇️
+Multiple Collections(C1,C2,C3...)
+     ⬇️
+Multiple Documents(d1,d2,d3...)
+
+-And document look like JSON
+
+
+Advantages of MongoDB :
+
+1.) It gives best of SQL & NOSQL
+
+RDBMS(SQL) provides :
+-schema
+-transaction
+-Relationship
+
+NOSQL provides
+-flexible schema
+-scalability
+
+But MonhoDB provides both of these.
+
+2.) It is open source(Free of cost)
+
+3.) Horizontally scalability
+
+scalability:- If a system have 1000 records and it takes 10ms query time -- After few 
+months the number of records increases to 1million and after that also it takes approx.
+10ms. It means System is scalable. But, if query time increases then we called it is 
+not scalable.
+
+In MYSQL & Oracle :- If Data load (increases), query time(increases)
+
+How to Scale things up?
+
+Vertical Scaling:
+
+Let's consider you have 500mb of storage and its 90% storage full, then we bought another
+500mb storage and and add up with the privious storage (500mb+500mb=1000mb) and if this
+storage also full, we bought another 500mb storage (500mb+500mb+500mb=1500mb).
+Here we increases the storage of a machine, This is called Vertical Scaling.
+
+In sort: increases storage of same machine to increase performance.
+
+Vertical scaling challenges:
+
+
+ 
+
+
