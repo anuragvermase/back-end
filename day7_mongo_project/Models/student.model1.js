@@ -37,7 +37,7 @@ const studentSchema = new mongoose.Schema({
 module.exports = mongoose.model("student",studentSchema);
 /*student - name of the collection
   studentSchema - schema of the document
-  modulle.exports - for exporting the module,
+  module.exports - for exporting the module,
   ** this files becomes module. so, we can called from anyother place
 
   student --> students (takes prural version) collection made in data base
