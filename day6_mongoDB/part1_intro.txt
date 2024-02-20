@@ -78,8 +78,47 @@ Here we increases the storage of a machine, This is called Vertical Scaling.
 In sort: increases storage of same machine to increase performance.
 
 Vertical scaling challenges:
+->single point failure, if it fails you loose all data
+->After a point you won't get as much performance increase as much you pay,
+  so you won't relay on vertical scaling for large data storage.
 
 
+Horizontal Scaling :
+It said instead of using one machine use multiple machine.
+
+if we want to store 2000 MB of data we use multiple machine (eg. 4 machine each of 
+storage 500MB and connected over a newwork).
+If data increase add new machine, if data decrease remove the machine from the network.
+
+
+4.) Data replication
+
+5.) Reliable
+
+6.) Flexible Schema
+
+
+Use cases  of mongoDB:
+
+-> Content Management System
+-> Product Data Management
+-> Operational Intelligence
+-> Online aplliction
+
+
+Sharding in MongoDB:
+
+shard means "a small part of a whole" hence Sharding means dividing a larger part into 
+smaller parts.
+
+Horizontally scalable is known as Sharding
+
+EG. a product have "1 million" documents and so we can divide it to 3 differnet machine 
+3.33lakh documents each. This is called sharding (Distributing data on multiple machine)
+
+Then what id any machine fails its all data removes, to overcome this problem we replicating 
+the data (storing data in more than 1 machine. so, if one machine down we can access data 
+from another machine)
  
 
 
