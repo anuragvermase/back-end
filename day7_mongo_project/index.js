@@ -63,6 +63,6 @@ async function dbQueries(){
     //delete a document where name="anurag verma"
 
     const std3 = await studentModel.deleteOne({name :"anurag verma"})
-    console.log(std3); //{ acknowledged: true, deletedCount: 1 }s
+    console.log(std3); //{ acknowledged: true, deletedCount: 1 }
 
 }
