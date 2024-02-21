@@ -1,0 +1,9 @@
+What is an API?
+
+An API, or "application programming interface", is a set of rules or protocols that 
+let software applications communicate with each other to exchange data, features and 
+functionality.
+
+Insort API is application programming interface through which two applications can talk 
+and communicate
+
