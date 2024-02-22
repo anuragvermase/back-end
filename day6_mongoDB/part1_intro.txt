@@ -119,6 +119,122 @@ EG. a product have "1 million" documents and so we can divide it to 3 differnet 
 Then what id any machine fails its all data removes, to overcome this problem we replicating 
 the data (storing data in more than 1 machine. so, if one machine down we can access data 
 from another machine)
- 
+
+MongoDB is scalable because of two reasons:
+
+1. Sharding
+2. Replica set
 
 
+How MongoDB stores data
+-In the form of Documents (look like JSON)
+BSON: Binary JSON
+
+Advantages os BSON
+1.less space 
+2.faster traversal (improve query speed)
+3.large number of data type
+
+Data types in MongoDB:
+Text:
+>string 
+
+Numeric:
+>32-bit integer
+>64-but integer
+>Double
+>Decimal128
+
+Date/time:
+>Date
+>Timestamp
+
+Others:
+>Object
+>Array
+>Binary Data 
+>ObjectID
+>Boolean
+>Null
+>Regular expression
+>Javascript
+>Minkey
+>Maxkey
+
+** In MongoDB max. size of document is 16MB
+
+
+Data Modelling in MongoDB
+
+* Representing Entities (Documents [BSON])
+* Relationship
+
+Relationship type:
+
+> 1 to 1 : citizen <--> Aadhar
+> 1 to many : country <--> citizen
+> many to 1 : citizen <--> country
+> many to many : student <--> teacher
+
+Ways of Representing Relationship :
+>1. Embedded Data:
+{
+     _id :<object1>,
+     username:"123xyz",
+     contact:{                          //Embedded
+          phone:"123-456-7890",
+          email:"xyz@gmail.com"
+     }
+     access:{                           //Embedded
+          level:5,
+          group:" "
+     }
+}
+
+>2. Refernces
+
+{
+     id:<object id>,
+     username: "123xyz" 
+}
+
+
+context document:
+
+{
+     _id:<object2>,
+     userid:<objectId1>,       
+     phone:"123-456-7890",
+     email:"xyz@gmail.com"   
+}
+
+access document:
+
+{
+     _id:<object3>,
+     userid:<objectId1>,
+     level:5,
+     group:" "
+}
+
+here, unique id fields refers to another documents (known as reference)
+
+
+Embedded document:
+Advantages:
+> Fast query (single query can fetch me all data)
+> Easy to create
+> Easy to maintain transaction
+
+challenges:
+> Chances to too muc embedding can exceed 16MB limitation
+> Excess of data loaded each time. (eager loading)
+
+Referencing :
+Advantages:
+> Small documents
+> Lazy loading (load only that much data which is needed)
+
+challenges:
+> Query could be slower. (because of multiple query)
+> transaction become complecated.
