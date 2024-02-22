@@ -1,7 +1,7 @@
 Commands:
 
 mongosh: 'mongosh' command is used as a command-line interface(CLI) for MongoDB. 
-It allows usres to interact with MOngoDB databases, run queries, perform administrative 
+It allows usres to interact with MongoDB databases, run queries, perform administrative 
 task and manage database operatons from the command line.
 
 cls : use to clear the screen.
@@ -14,7 +14,70 @@ use admin: 'use' command use to change the database
 
 use newdb : 'use' command also use to create new database
 
+
 COLLECTIONS 
 
+* To create a new collection
 
-TBC.....
+db.createCollection("nameOfColletion");
+{ok:1}
+
+* To see list of collections
+student-> collection present in database 
+
+show collections;
+
+* To rename a collection
+
+db.nameOfCollection.renameCollection("newCollectionName");
+{ok:1}
+
+* To remove a collection 
+
+db.nameOfCollection.drop();
+true
+
++++++++++++++++++++++++++++++++++++++
+Database
+   ⬇️
+Colllection
+   ⬇️
+Documents
+   ⬇️
+
+insert(create),queries(read),update,delete {CRUD operation}
+
++++++++++++++++++++++++++++++++++++++
+
+* Creation of document/data
+
+var user ={
+    name: "Anurag Verma",
+    ip:"127.0.0.1",
+    LastLoginTime : 15757048976
+}
+user -> created.
+
+* To create new colletion and insert data(user) at same time
+
+db.students.insertOne(user);    //student -> DB, InsertOne -> insert of one document
+{
+    acknowledgement :true,
+    insertId:objectId("..........")
+}
+
+* To insert multiple document in collection ("insertMany)
+
+db.students.insertMany([{name:"anurag",ip:"121.0.0>4"},{name:"suraj",hobby:"dance"}]);
+//pack multiple document into Array
+
+* To read the document
+
+db.students.find();
+
+*search with filter.
+
+db.students.find({name:"anurag"});
+
+
+TB........
