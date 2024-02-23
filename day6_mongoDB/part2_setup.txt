@@ -80,4 +80,45 @@ db.students.find();
 db.students.find({name:"anurag"});
 
 
-TB........
+//Nested Document
+var n_user = {
+   name:"john",
+   job:{
+      title:"programmer",
+      salary:125000
+   }
+}
+
+db.students.insertOne(n_user); //insert the document in DB(students)
+
+* query one nested fields(read)
+
+db.students.find({'job.title':'programmer'});
+
+* query to find document by alphabet(RegEx)
+
+db.students.find({name:/v.*/}); //     /v.*/->RegEx
+
+* to show only limited documents.
+
+db.students.find().limit(2); // limit(2)-> out of all document only show first two document
+
+* to format(structure) the document 
+
+db.students.find().pretty(); // pretty()-> use for better look of documents
+
+* to skip the documents 
+
+db.students.find().skip(2); // skip(2)-> skip the first two documents and shows rest documents
+
+* we can sort the document in Ascending & Decending order
+
+db.students.find().sort({name:1}); //1 -> means ascending order, if -1 means decending order
+
+* to find total count/number of documents.
+
+db.students.find().count();
+
+* retrive distinct value
+
+db.students.distinct('name') //gives list of all unique names.
