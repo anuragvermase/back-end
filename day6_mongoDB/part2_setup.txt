@@ -122,3 +122,42 @@ db.students.find().count();
 * retrive distinct value
 
 db.students.distinct('name') //gives list of all unique names.
+
+* less than
+
+db.collection.find({field:{$lt:200}}) //field may be salary & lt-> less than
+
+Mathematical operation:
+< : $lt 
+> : $gt
+<= : $lte 
+>= : $gte 
+not equal : $ne 
+in : $in 
+all : $all 
+
+* Updation Query.
+
+> Update document.
+
+db.collection.update.({field:'value'},{$set:{otherfield:'newvalue'}},{upsert:true})
+
+> increment value.
+
+db.collection.updateOne({field:'value'},{$inc:{number:6}})
+
+> push value to Array
+
+db.collection.updateOne({_id:1},{$push:{number:push:6}})
+//push 6 into number where id is 1.
+
+*Deletion queries
+
+db.operate.deleteOne(
+   {name:"krunal lathiya"}  //filter/search criteria
+)
+
+db.users.deleteMany({status:{$in:["dormant","inactive"]}})
+
+  
+
