@@ -1,0 +1,27 @@
+1. Create a Node js project.
+-> by using "npm init" in the terminal, it will create a .JSON file.
+
+2. Define the structure.
+-> Routes
+-> Controllers
+-> Models
+
+3. Do the Auth - it will done on User 
+-> Two type of user - 1. Admin & 2. Customer
+-> In the Auth - 1. Register
+                 2. Login - after login user gets "access token". 
+
+We need dependencies:
+1. Mongoose - use for database
+2. Express - use to create the server and API
+3. json web token - use to create the access token
+4. bcrypt.js - use to encrypt the data(username & password)
+
+To add dependencies use : "npm install dependency_name"
+
+we work on backend layers in this sequence:
+1. Models
+2. Controllers
+3. Routes
+
+
