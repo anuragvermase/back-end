@@ -2,16 +2,13 @@
 
 const express = require("express")
 const mongoose = require("mongoose")
-
 const app = express ()
-
 const server_config = require("./configs/server.config")
-
 const db_config = require("./configs/db.config")
 const user_model = require("./models/user.model")
 const bcryptjs = require("bcryptjs")
 
-
+app.use(express.json()) //middelware
 
 
 /**
@@ -34,11 +31,16 @@ db.once("open",()=>{
 })
 
 async function init(){
-    const user = await user_model.findOne({userId : "admin"})
 
-    if(user){
-        console.log("admin is already present")
-        return 
+    try{
+       let user = await user_model.findOne({userId : "admin"})
+
+       if(user){
+           console.log("admin is already present")
+           return 
+        }
+    }catch(err){
+    console.log("Error while reading the data",err);
     }
 
     try {
@@ -47,15 +49,19 @@ async function init(){
             userId : "admin",
             email : "anuragver689@gmail.com",
             userType : "ADMIN",
-            password : bcryptjs.hash("Anurag70",8)
+            password : bcryptjs.hashSync("Anurag70",8) //8->salt, and it is called salt based hashing
         })
-        console.log("admin created", user);
+        console.log("Admin created", user);
         
     } catch (error) {
         console.log("Error while create admin",error);
     }
 }
 
+/**
+ * stitch the route to the server
+ */
+require("./routes/auth.routes")(app)
 
 
 /** start the server */
