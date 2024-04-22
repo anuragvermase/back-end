@@ -59,7 +59,7 @@ async function init(){
 }
 
 /**
- * stitch the route to the server
+ * stitch the route to the server 
  */
 require("./routes/auth.routes")(app)
 

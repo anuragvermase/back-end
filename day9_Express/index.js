@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require("express");
 console.log(typeof express);
 
 const app = express()
